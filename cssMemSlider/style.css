@@ -5,6 +5,7 @@ body {
    overflow-x: hidden; 
    margin: 0;
    display: flex;
+   background-color: #fdfcfa;
 }
 *,
 *::before,
@@ -160,3 +161,44 @@ img {
   border: 0.2rem solid #683f35; 
   transition: 0.5s;
 }
+
+/* --------------------------------------------------------------- */
+
+@media (max-width: 420px) {
+
+ .memes_container {
+   width: 100%;
+   padding: 1.6rem 0.7rem;
+   /* background-image: url(assets/fon2.png); */
+   background-image: none;
+   background: #e6e6e6;
+  }
+ 
+  .memes {
+   height: 20rem;
+    margin-bottom: 0rem;
+  }
+
+  .memes_description {
+   flex-direction: column;
+   align-items: center;
+   padding: 0.5rem 0rem;
+   }
+ 
+  .text {
+    order: 1;
+    width: 100%;
+   }
+   .text_description {
+     text-align: center;
+     padding: 1.5rem 0rem 1.5rem 0.5rem;
+   }
+   .text_description-font{
+      font-size: 18px;
+   }
+
+   .bullets label {
+      height: 1rem;
+  }
+
+ }
