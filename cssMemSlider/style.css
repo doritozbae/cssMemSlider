@@ -1,14 +1,18 @@
 body {
    background-color: antiquewhite;
-   min-height: 100vh;
+   height: 100vh;
    width: 100%;
    overflow-x: hidden; 
    margin: 0;
+   display: flex;
 }
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+h2{
+   margin: 0;
 }
 img {
    max-width: 100%;
@@ -20,39 +24,79 @@ img {
    width: 80%;
    min-height: 100%;
    border: 2px solid pink;
-   padding: 8%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 .memes_container{
-   border: 2px solid red;
-   min-height: 100%;
+   height: auto;
    display: flex;
    flex-flow: column;
+   width: 55rem;
+   padding: 2.2rem 2.2rem;
+   border-radius: 0.65rem;
+   border: 2px solid hotpink;
 }
 
 .memes{
    border: 2px solid purple;
    width: 100%;
-   height: 50%;
-   margin-bottom: 4%;
+   margin-bottom: 1rem;
+   overflow: hidden;
+   height: 30rem;
+   border-radius: 0.65rem;
+}
+.memes_content{
+   width: calc(100% * 4);
+   height: 100%;
+   display: flex;
+   transition: all 0.7s;
 }
 
 .memes_description{
    border: 2px solid purple;
    width: 100%;
-   height: 30%;
+   height: auto;
    display: flex;
-   flex-flow: row-reverse
+   flex-flow: row-reverse;
+   padding: 1.5rem 1.5rem;
 }
 
-.description{
+
+.text{
+   overflow: hidden;
    width: 60%;
+}
+.text_description {
+   width: calc(100% * 4);
+   display: flex;
+   justify-content: flex-start;
    height: 100%;
    border: 2px solid greenyellow;
+   padding: 1.5rem 1.5rem;
+}
+.text_description-font{
+   width: calc(100% / 4);
+   
 }
 
 .bullets{
    width: 40%;
-   height: 100%;
-   
+   height: 100%; 
+   display: flex;
+   justify-content: flex-end;
+}
+.bullet{ 
+   cursor: pointer;
+   transition: 0.5s;
+   display: block;
+   width: 1rem;
+   height: 1rem;
+   border-radius: 50%;
+   background: greenyellow;
+}
+
+.memes_container-radio{
+   display: none;
 }
