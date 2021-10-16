@@ -75,7 +75,6 @@ img {
    padding: 1.5rem 0rem;
 }
 
-
 .text{
    overflow: hidden;
    width: 60%;
@@ -126,9 +125,6 @@ img {
    border-color: #a88f7c !important;
    transition: 0.5s;
 }
-/* .bullets label + .bullet label {
-   margin-left: 0.8rem;
-} */
 
 .memes_container-radio{
    display: none;
