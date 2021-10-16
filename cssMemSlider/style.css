@@ -1,0 +1,200 @@
+body {
+   /* background-color: antiquewhite; */
+   height: 100vh;
+   width: 100%;
+   overflow-x: hidden; 
+   margin: 0;
+   display: flex;
+   background-color: #fdfcfa;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+h2{
+   margin: 0;
+}
+img {
+   max-width: 100%;
+   display: block;
+}
+
+.container{ 
+   margin: 0 auto;
+   width: 80%;
+   min-height: 100%;
+   /* border: 2px solid pink; */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.memes_container{
+   box-shadow: 0px 6px 15px 0px rgb(54 0 0 / 8%);
+   height: auto;
+   display: flex;
+   flex-flow: column;
+   width: 52rem;
+   padding: 1.7rem 1.3rem;
+   border-radius: 0.3rem;
+   /* border: 2px solid hotpink; */
+   background-color: whitesmoke;
+   background-size: cover;
+   background-image: url(assets/Фон.jpg);
+   border: 0.25px solid rgba(58, 33, 28, 0.02);
+}
+
+.memes{
+   /* border: 2px solid purple; */
+   width: 100%;
+   margin-bottom: 1rem;
+   overflow: hidden;
+   height: 29rem;
+   border-radius: 0.3rem;
+}
+.memes_content{
+   width: calc(100% * 4);
+   height: 100%;
+   display: flex;
+   transition: all 0.5s;
+}
+.memes_content-image{
+   object-fit: cover;
+   width: calc(100% / 4);
+   height: 100%;
+   /* box-shadow: inset 0px 0px 20px 20px #000;  */
+}
+
+.memes_description{
+   /* border: 2px solid purple; */
+   width: 100%;
+   height: auto;
+   display: flex;
+   flex-flow: row-reverse;
+   padding: 1.5rem 0rem;
+}
+
+.text{
+   overflow: hidden;
+   width: 60%;
+}
+.text_description {
+   width: calc(100% * 4);
+   display: flex;
+   justify-content: flex-start;
+   height: 100%;
+   /* border: 2px solid greenyellow; */
+   padding: 3rem 0rem 1.5rem 7rem;
+   transition: all 0.5s;
+}
+.text_description-font{
+   width: calc(100% / 4);
+   font-family: 'Rock Salt', cursive;
+   font-size: 30px;
+   line-height: 0;
+   color: #33211d;
+}
+
+.bullets{
+   width: 40%;
+   height: 100%; 
+   display: flex;
+   justify-content: flex-end;
+   
+}
+.bullets label{
+   width: 2rem;
+   height: 2rem;
+   cursor: pointer;
+}
+.bullet{ 
+   cursor: pointer;
+   transition: 0.5s;
+   display: block;
+   width: 1rem;
+   height: 1rem;
+   border-radius: 50%;
+   background: #683f35;
+   transition: 0.6s;
+}
+.bullet:hover {
+   background: #a88f7c;
+}
+.bullets label:hover .bullet{
+   border-color: #a88f7c !important;
+   transition: 0.5s;
+}
+
+.memes_container-radio{
+   display: none;
+}
+
+/* слайдер */
+#memes1:checked ~ .memes .memes_content,
+#memes1:checked ~ .memes_description .text .text_description {
+   margin-left: 0;
+}
+#memes2:checked ~ .memes .memes_content,
+#memes2:checked ~ .memes_description .text .text_description {
+   margin-left: -100%;
+}
+#memes3:checked ~ .memes .memes_content,
+#memes3:checked ~ .memes_description .text .text_description {
+   margin-left: -200%;
+}
+#memes4:checked ~ .memes .memes_content,
+#memes4:checked ~ .memes_description .text .text_description {
+   margin-left: -300%;
+}
+
+/* буллет текущего слайда */
+#memes1:checked ~ .memes_description .bullets label:nth-child(1) .bullet,
+#memes2:checked ~ .memes_description .bullets label:nth-child(2) .bullet,
+#memes3:checked ~ .memes_description .bullets label:nth-child(3) .bullet,
+#memes4:checked ~ .memes_description .bullets label:nth-child(4) .bullet{
+  background: transparent;
+  border: 0.2rem solid #683f35; 
+  transition: 0.5s;
+}
+
+/* --------------------------------------------------------------- */
+
+@media (max-width: 420px) {
+
+ .memes_container {
+   width: 100%;
+   padding: 1.6rem 0.7rem;
+   /* background-image: url(assets/fon2.png); */
+   background-image: none;
+   background: #e6e6e6;
+  }
+ 
+  .memes {
+   height: 20rem;
+    margin-bottom: 0rem;
+  }
+
+  .memes_description {
+   flex-direction: column;
+   align-items: center;
+   padding: 0.5rem 0rem;
+   }
+ 
+  .text {
+    order: 1;
+    width: 100%;
+   }
+   .text_description {
+     text-align: center;
+     padding: 1.5rem 0rem 1.5rem 0.5rem;
+   }
+   .text_description-font{
+      font-size: 18px;
+   }
+
+   .bullets label {
+      height: 1rem;
+  }
+
+ }
